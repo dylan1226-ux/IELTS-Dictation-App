@@ -4,8 +4,13 @@ import pandas as pd
 app = Flask(__name__)
 
 
+<<<<<<< HEAD
 basic_words = pd.read_csv('/Users/dylanpan/Documents/GitHub/IELTS-Dictation-App/IELTS_vocab/words_basic.csv')
 advanced_words = pd.read_csv('/Users/dylanpan/Documents/GitHub/IELTS-Dictation-App/IELTS_vocab/words_advanced.csv')
+=======
+basic_words = pd.read_csv('words_basic.csv')
+advanced_words = pd.read_csv('words_advanced.csv')
+>>>>>>> 10c38751c683677a0e29630d7e6ffb1b0cf9a8dd
 
 
 @app.route('/')
