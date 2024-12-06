@@ -4,8 +4,8 @@ import pandas as pd
 app = Flask(__name__)
 
 
-basic_words = pd.read_csv('/Users/dylanpan/Desktop/PycharmProjects/pythonProject1/words_basic.csv')
-advanced_words = pd.read_csv('/Users/dylanpan/Desktop/PycharmProjects/pythonProject1/words_advanced.csv')
+basic_words = pd.read_csv('words_basic.csv')
+advanced_words = pd.read_csv('words_advanced.csv')
 
 
 @app.route('/')
