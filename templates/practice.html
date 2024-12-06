@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>默写 Practice</title>
+</head>
+<body>
+    <h1>默写 Practice</h1>
+
+    <form method="POST" action="/submit_answers">
+        {% for code, chinese in words %}
+            <label>{{ code }} - {{ chinese }}</label><br>
+            <input type="text" name="{{ code }}" placeholder="" required><br><br>
+        {% endfor %}
+
+        <input type="submit" value="Submit Answers">
+    </form>
+
+    <br>
+    <img src="{{ url_for('static', filename='images/img_2.png') }}" alt="Image Description" style="max-width: 40%; height: 40%;"><br><br>
+
+    <a href="/">Go back to choose another list</a>
+
+
+</body>
+</html>

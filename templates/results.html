@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>默写 Results</title>
+</head>
+<body>
+    <h1>Your Results</h1>
+
+    <ul>
+        {% for code, user_input, correct_word, chinese_translation in result %}
+            <li>Code: {{ code }} | Your Answer: {{ user_input }} | Correct Word: {{ correct_word }} | Chinese: {{ chinese_translation }}</li>
+        {% endfor %}
+    </ul>
+
+    <br>
+
+    <img src="{{ url_for('static', filename='images/img.png') }}" alt="Image Description" style="max-width: 30%; height: 30%;"><br><br>
+
+    <a href="/">Go back to choose another list</a>
+</body>
+</html>

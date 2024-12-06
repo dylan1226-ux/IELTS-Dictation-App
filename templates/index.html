@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>默写 Practice</title>
+</head>
+<body>
+    <h1>选择要练习的词汇表</h1>
+
+    <img src="{{ url_for('static', filename='images/img_1.png') }}" alt="Image Description" style="max-width: 60%; height: 60%;"><br><br>
+
+    <form method="POST" action="/start_practice">
+        <label for="list">选择词汇表：</label><br>
+        <select name="list" id="list">
+            <option value="basic">雅思基础词汇</option>
+            <option value="advanced">雅思强化词汇</option>
+        </select><br><br>
+
+        <label for="range">选择范围（例如：100-200）：</label><br>
+        <input type="text" name="range" id="range" required><br><br>
+
+        <input type="submit" value="开始练习">
+    </form>
+</body>
+</html>
