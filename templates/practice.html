@@ -9,6 +9,9 @@
     <h1>默写 Practice</h1>
 
     <form method="POST" action="/submit_answers">
+        <!-- Add the hidden field for the word list -->
+        <input type="hidden" name="word_list" value="{{ word_list }}">
+
         {% for code, chinese in words %}
             <label>{{ code }} - {{ chinese }}</label><br>
             <input type="text" name="{{ code }}" placeholder="" required><br><br>
@@ -21,7 +24,6 @@
     <img src="{{ url_for('static', filename='images/img_2.png') }}" alt="Image Description" style="max-width: 40%; height: 40%;"><br><br>
 
     <a href="/">Go back to choose another list</a>
-
 
 </body>
 </html>

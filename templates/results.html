@@ -9,14 +9,27 @@
     <h1>Your Results</h1>
 
     <ul>
-        {% for code, user_input, correct_word, chinese_translation in result %}
-            <li>Code: {{ code }} | Your Answer: {{ user_input }} | Correct Word: {{ correct_word }} | Chinese: {{ chinese_translation }}</li>
+        {% for code, user_input, correct_word, chinese_translation, is_correct in result %}
+            <li>
+                <strong>Word Code:</strong> {{ code }} <br>
+                <strong>Chinese Translation:</strong> {{ chinese_translation }} <br>
+
+                <strong>Your Answer:</strong> <span style="color: black;">{{ user_input }}</span> <br>
+                <strong>Correct Word:</strong> <span style="color: blue;">{{ correct_word }}</span> <br>
+
+                {% if is_correct %}
+                    <span style="color: green;">Correct!</span>  <!-- Green for correct answers -->
+                {% else %}
+                    <span style="color: red;">Incorrect</span>  <!-- Red for incorrect answers -->
+                {% endif %}
+            </li>
+            <br> <!-- Add an empty line between each word -->
         {% endfor %}
     </ul>
 
     <br>
 
-    <img src="{{ url_for('static', filename='images/img.png') }}" alt="Image Description" style="max-width: 30%; height: 30%;"><br><br>
+    <img src="{{ url_for('static', filename='images/img.png') }}" alt="Image Description" style="max-width: 50%; width: 100%; height: auto; display: block; margin: 0 auto;"><br><br>
 
     <a href="/">Go back to choose another list</a>
 </body>
