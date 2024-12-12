@@ -18,12 +18,12 @@
                 <strong>Correct Word:</strong> <span style="color: blue;">{{ correct_word }}</span> <br>
 
                 {% if is_correct %}
-                    <span style="color: green;">Correct!</span>  <!-- Green for correct answers -->
+                    <span style="color: green;">Correct!</span>
                 {% else %}
-                    <span style="color: red;">Incorrect</span>  <!-- Red for incorrect answers -->
+                    <span style="color: red;">Incorrect</span>
                 {% endif %}
             </li>
-            <br> <!-- Add an empty line between each word -->
+            <br>
         {% endfor %}
     </ul>
 

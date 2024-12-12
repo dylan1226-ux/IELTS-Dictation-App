@@ -40,11 +40,9 @@ def submit_answers():
 
     # Iterate over each submitted answer
     for code, user_input in words.items():
-        # Skip the hidden field 'word_list'
         if code == 'word_list':
             continue
 
-        # Fetch the correct word row based on whether it's from the basic or advanced list
         if word_list == 'basic':
             word_row = basic_words[basic_words['code'] == int(code)]
         else:
